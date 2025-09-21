@@ -21,5 +21,4 @@ export const routes: Routes = [
     {path:'categoryProducts/:name', loadComponent: () => import('./features/category-products/category-products').then((c) => c.CategoryProducts), title:'Category Products'},
     {path:'subcategoryProducts/:name', loadComponent: () => import('./features/subcategory-products/subcategory-products').then((c) => c.SubcategoryProducts), title:'Subcategory Products'},
     {path:'**', loadComponent: () => import('./features/not-found/not-found').then((c) => c.NotFound), title:'Not Found'}
-];import { RenderMode } from '@angular/ssr';
-
+];
