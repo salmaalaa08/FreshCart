@@ -11,14 +11,15 @@ export const routes: Routes = [
     {path:'categories', loadComponent: () => import('./features/categories/categories').then((c) => c.Categories), title:'Categories'},
     {path:'cart', loadComponent: () => import('./features/cart/cart').then((c) => c.Cart), title:'Cart', canActivate:[authGuard]},
     {path:'wishlist',loadComponent: () => import('./features/wishlist/wishlist').then((c) => c.Wishlist), title:'Wishlist', canActivate:[authGuard]},
-    {path:'checkout/:id', loadComponent: () => import('./features/checkout/checkout').then((c) => c.Checkout), title:'Checkout', canActivate:[authGuard],data: { renderMode: 'client' }},
+    {path:'checkout/:id', loadComponent: () => import('./features/checkout/checkout').then((c) => c.Checkout), title:'Checkout', canActivate:[authGuard]},
     {path:'allorders', loadComponent: () => import('./features/all-orders/all-orders').then((c) => c.AllOrders), title:'All Orders', canActivate:[authGuard]},
     {path:'login', loadComponent: () => import('./features/login/login').then((c) => c.Login), title:'Login', canActivate:[loggedinGuard]},
     {path:'signup', loadComponent: () => import('./features/signup/signup').then((c) => c.Signup), title:'Signup', canActivate:[loggedinGuard]},
     {path:'forgetpassword', loadComponent: () => import('./features/forgetpassword/forgetpassword').then((c) => c.Forgetpassword), title:'Forget Password', canActivate:[loggedinGuard]},
-    {path:'productDetails/:id', loadComponent: () => import('./features/product-details/product-details').then((c) => c.ProductDetails), title:'Product Details', data: { renderMode: 'client' }},
-    {path:'brandProducts/:name', loadComponent: () => import('./features/brand-products/brand-products').then((c) => c.BrandProducts), title:'Brand Products', data: { renderMode: 'client' }},
-    {path:'categoryProducts/:name', loadComponent: () => import('./features/category-products/category-products').then((c) => c.CategoryProducts), title:'Category Products', data: { renderMode: 'client' }},
-    {path:'subcategoryProducts/:name', loadComponent: () => import('./features/subcategory-products/subcategory-products').then((c) => c.SubcategoryProducts), title:'Subcategory Products', data: { renderMode: 'client' }},
+    {path:'productDetails/:id', loadComponent: () => import('./features/product-details/product-details').then((c) => c.ProductDetails), title:'Product Details'},
+    {path:'brandProducts/:name', loadComponent: () => import('./features/brand-products/brand-products').then((c) => c.BrandProducts), title:'Brand Products'},
+    {path:'categoryProducts/:name', loadComponent: () => import('./features/category-products/category-products').then((c) => c.CategoryProducts), title:'Category Products'},
+    {path:'subcategoryProducts/:name', loadComponent: () => import('./features/subcategory-products/subcategory-products').then((c) => c.SubcategoryProducts), title:'Subcategory Products'},
     {path:'**', loadComponent: () => import('./features/not-found/not-found').then((c) => c.NotFound), title:'Not Found'}
-];
+];import { RenderMode } from '@angular/ssr';
+
