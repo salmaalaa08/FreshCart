@@ -13,6 +13,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { loadingInterceptor } from './core/interceptors/loading/loading-interceptor';
 import {provideTranslateService, TranslateService} from "@ngx-translate/core";
 import {provideTranslateHttpLoader} from "@ngx-translate/http-loader";
+import { provideServerRendering } from '@angular/ssr';
 
 
 
@@ -33,6 +34,7 @@ export const appConfig: ApplicationConfig = {
       })
     }),
     provideRouter(routes, withViewTransitions()),
+    provideServerRendering(),
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes), provideClientHydration(withEventReplay()),

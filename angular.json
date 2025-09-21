@@ -107,6 +107,14 @@
               "src/styles.scss"
             ]
           }
+        },
+        "prerender": {
+          "builder": "@angular/build:prerender",
+          "options": {
+            "browserTarget": "freshcart:build:production",
+            "serverTarget": "freshcart:server:production",
+            "routesFile": "prerender.config.ts"
+          }
         }
       }
     }
