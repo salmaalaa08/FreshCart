@@ -1,0 +1,88 @@
+<section class="bg-gray-100 border w-[50%] mx-auto my-10 border-gray-100 p-15">
+    <h1 class="text-center text-4xl mb-10 text-green-600">{{"signup.Register Now" | translate}}</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+        <div class="relative my-8">
+            <input formControlName="name" type="text" id="name" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="name" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"form.Name" | translate}}</label>
+        </div>
+        @if(registerForm.get('name')?.errors && registerForm.get('name')?.touched){
+            <div class="text-red-700">
+                @if(registerForm.get('name')?.getError('required')){
+                    <p>{{"signup.Name is required" | translate}}</p>
+                }
+                @if(registerForm.get('name')?.getError('maxlength')){
+                    <p>{{"signup.MaxLength is 20 chars" | translate}}</p>
+                }
+                @if(registerForm.get('name')?.getError('minlength')){
+                    <p>{{"signup.MinLength is 3 chars" | translate}}</p>
+                }
+            </div>
+        }
+        <div class="relative my-8">
+            <input formControlName="email" type="email" id="email" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="email" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"form.Email" | translate}}</label>
+        </div>
+        @if(registerForm.get('email')?.errors && registerForm.get('email')?.touched){
+            <div class="text-red-700">
+                @if(registerForm.get('email')?.getError('required')){
+                    <p>{{"form.Email is required" | translate}}</p>
+                }
+                @if(registerForm.get('email')?.getError('email')){
+                    <p>{{"form.Enter a valid email" | translate}}</p>
+                }
+            </div>
+        }
+        <div class="relative my-8">
+            <input formControlName="password" type="password" id="password" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="password" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"form.Password" | translate}}</label>
+        </div>
+        @if(registerForm.get('password')?.errors && registerForm.get('password')?.touched){
+            <div class="text-red-700">
+                @if(registerForm.get('password')?.getError('required')){
+                    <p>{{"form.Password is required" | translate}}</p>
+                }
+                @if(registerForm.get('password')?.getError('pattern')){
+                    <p>{{"form.Enter a valid password" | translate}}</p>
+                }
+            </div>
+        }
+        <div class="relative my-8">
+            <input formControlName="rePassword" type="password" id="rePassword" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="rePassword" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"signup.Confirm Password" | translate}}</label>
+        </div>
+        @if(registerForm.get('rePassword')?.errors && registerForm.get('rePassword')?.touched){
+            <div class="text-red-700">
+                @if(registerForm.get('rePassword')?.getError('required')){
+                    <p>{{"signup.Confirm Password is required" | translate}}</p>
+                }
+            </div>
+        }
+        @if(registerForm.getError('mismatch') && registerForm.get('rePassword')?.touched){
+            <p class="text-red-700">{{"signup.Confirm Password and Password are not matched" | translate}}</p>
+        }
+        <div class="relative my-8">
+            <input formControlName="phone" type="tel" id="phone" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="phone" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"form.Phone" | translate}}</label>
+        </div>
+        @if(registerForm.get('phone')?.errors && registerForm.get('phone')?.touched){
+            <div class="text-red-700">
+                @if(registerForm.get('phone')?.getError('required')){
+                    <p>{{"form.Phone is required" | translate}}</p>
+                }
+                @if(registerForm.get('phone')?.getError('pattern')){
+                    <p>{{"signup.Enter a valid phone number" | translate}}</p>
+                }
+            </div>
+        }
+        <button class="btn mt-5">
+            {{"form.Signup" | translate}}
+            @if(isLoading){
+                <i class="fas fa-spinner"></i>
+            }
+        </button>
+        <p class="text-red-700 text-center">{{errMsg}}</p>
+        <div class="text-center mt-5">
+            <p class="text-gray-700">{{"signup.Already have an account ?" | translate}} <a class="text-green-700 hover:text-green-800" routerLink="/login">{{"form.Login" | translate}}</a></p>
+        </div>
+    </form>
+</section>

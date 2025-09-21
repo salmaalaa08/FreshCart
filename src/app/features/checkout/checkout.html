@@ -1,0 +1,62 @@
+<section class="bg-gray-100 border w-[50%] mx-auto my-10 border-gray-100 p-15">
+    <h1 class="text-center text-4xl mb-10 text-green-600">{{"checkout.Shipping Address" | translate}}</h1>
+    <form [formGroup]="checkoutForm">
+        <div class="relative my-8">
+            <input formControlName="details" type="text" id="details" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="details" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"checkout.Details" | translate}}</label>
+        </div>
+        @if(checkoutForm.get('details')?.errors && checkoutForm.get('details')?.touched){
+            <div class="text-red-700">
+                @if(checkoutForm.get('details')?.getError('required')){
+                    <p>{{"checkout.Details is required" | translate}}</p>
+                }
+            </div>
+        }
+        <div class="relative my-8">
+            <input formControlName="phone" type="tel" id="phone" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="phone" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"form.Phone" | translate}}</label>
+        </div>
+        @if(checkoutForm.get('phone')?.errors && checkoutForm.get('phone')?.touched){
+            <div class="text-red-700">
+                @if(checkoutForm.get('phone')?.getError('required')){
+                    <p>{{"form.Phone is required" | translate}}</p>
+                }
+            </div>
+        }
+        <div class="relative my-8">
+            <input formControlName="city" type="text" id="city" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-green-600 peer" placeholder=" " />
+            <label for="city" class="absolute text-sm text-gray-700 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-green-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{"checkout.City" | translate}}</label>
+        </div>
+        @if(checkoutForm.get('city')?.errors && checkoutForm.get('city')?.touched){
+            <div class="text-red-700">
+                @if(checkoutForm.get('city')?.getError('required')){
+                    <p>{{"checkout.City is required" | translate}}</p>
+                }
+            </div>
+        }
+
+        <div class="flex justify-center gap-5">
+            <button 
+              type="button"
+              (click)="submitCard()" 
+              class="text-white bg-green-600 py-3 px-5 my-2 rounded-md hover:bg-green-700 mt-5">
+                {{"checkout.Pay with Card" | translate}}
+                @if(isLoadingCard){
+                  <i class="fas fa-spinner"></i>
+                }
+            </button>
+          
+            <button 
+              type="button"
+              (click)="submitCash()" 
+              class="text-white bg-green-600 py-3 px-5 my-2 rounded-md hover:bg-green-700 mt-5">
+                {{"checkout.Pay in Cash" | translate}}
+                @if(isLoadingCash){
+                  <i class="fas fa-spinner"></i>
+                }
+            </button>
+          </div>
+          
+        <p class="text-red-700 text-center">{{errMsg}}</p>
+    </form>
+</section>

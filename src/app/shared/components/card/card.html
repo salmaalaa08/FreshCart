@@ -1,0 +1,60 @@
+<div class="bg-white border border-gray-200 rounded-lg shadow-md flex flex-col h-full relative">
+
+  @if(isLoggedIn){
+    <button (click)="toggleWishlist(productData?._id)"
+    class="absolute top-3 right-3 p-2 border border-gray-200 rounded-full bg-white/80 hover:bg-white shadow-md transition">
+    <i class="fa-solid fa-heart"
+    [ngClass]="isInWishlist ? 'text-green-600 hover:text-gray-700' : 'text-gray-700 hover:text-green-600'"></i>
+   </button>
+  }
+  
+  <div [routerLink]="['/productDetails', productData?._id]" class="flex flex-col cursor-pointer">
+    <img
+      class="rounded-t-lg w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 object-cover"
+      [src]="productData?.imageCover"
+      alt="product image" />
+    <div class="p-4 sm:p-5 flex flex-col flex-grow">
+      <h5
+        class="text-base sm:text-lg md:text-xl font-semibold tracking-tight text-gray-900 line-clamp-2">
+        {{productData?.title | onSale}}
+      </h5>
+      <div class="mt-2 text-sm text-gray-600">
+        <p><span class="font-medium text-gray-800">{{"common.Brand" | translate}}:</span> {{productData?.brand?.name || 'N/A'}}</p>
+        <p><span class="font-medium text-gray-800">{{"common.Category" | translate}}:</span> {{productData?.category?.name || 'N/A'}}</p>
+      </div>
+      <div class="flex items-center mt-2 mb-4">
+        <!-- <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+          viewBox="0 0 22 20">
+          <path
+            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+        </svg> -->
+        <i class="fa-solid fa-star text-yellow-300"></i>
+        <span
+          class="bg-green-100 text-green-600 text-xs sm:text-sm font-semibold px-2.5 py-0.5 rounded-sm ms-2">
+          {{productData?.ratingsAverage}}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-4 sm:p-5 mt-auto">
+    <div class="flex items-center justify-between">
+      <span
+        class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
+        {{productData?.price | currency:'EGP'}}
+      </span>
+
+      @if(isInCart){
+          <div class="flex items-center space-x-2">
+            <button class="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300" (click)="updateProdCount(quantity - 1, productData?._id)"> - </button>
+            <span class="font-medium">{{quantity}}</span>
+            <button class="px-3 py-1 bg-gray-200 rounded-lg hover:bg-gray-300" (click)="updateProdCount(quantity + 1, productData?._id)"> + </button>
+          </div> 
+    } @else {
+        <a (click)="addToCart(productData?._id)" class="text-white bg-green-600 hover:bg-green-700 rounded-lg text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 transition cursor-pointer"> {{"common.Add to cart" | translate}} </a>
+      }
+            
+    </div>
+  </div>
+</div>

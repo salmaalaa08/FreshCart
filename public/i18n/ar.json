@@ -1,0 +1,123 @@
+{
+    "common": {
+        "Home": "الرئسية",
+        "Brand": "الصنف",
+        "Category": "الفئة",
+        "Categories": "التصنيفات",
+        "Brands": "العلامات التجارية",
+        "Add to cart": "أضف إلى السلة",
+        "All Orders": "جميع الطلبات",
+        "Go to All Products": "اذهب إلى جميع المنتجات"
+    },
+    "form" : {
+        "Login": "تسجيل الدخول",
+        "Signup": "اشتراك",
+        "Email": "البريد الإلكتروني",
+        "Password": "كلمة المرور",
+        "Name": "الاسم",
+        "Phone": "رقم الهاتف",
+        "Email is required": "البريد الإلكتروني مطلوب",
+        "Enter a valid email": "أدخل بريدًا إلكترونيًا صحيحًا",
+        "Password is required": "كلمة المرور مطلوبة",
+        "Enter a valid password": "أدخل كلمة مرور صحيحة",
+        "Phone is required": "رقم الهاتف مطلوب"
+    },
+    "navbar": {
+        "Products": "المنتجات",
+        "Logout": "تسجيل الخروج"
+    },
+    "home": {
+        "Popular Products": "المنتجات الشعبية",
+        "Popular Categories": "الفئات الشعبية",
+        "Popular Brands": "المصنفات الشعبية",
+        "See More": "عرض المزيد"
+    },
+    "products": {
+        "All Products": "جميع المنتجات",
+        "Search product": "بحث عن منتج ..."
+    },
+    "categories": {
+        "All Categories": "جميع الفئات",
+        "No products to this category": "لا توجد منتجات لهذا القسم",
+        "No products to this Subcategory": "لا توجد منتجات لهذا القسم الفرعي"
+    },
+    "brands": {
+        "All Brands": "جميع المصنفات",
+        "No products to this brand": "لا توجد منتجات لهذه العلامة التجارية"
+    },
+    "cart": {
+        "Your Cart": "سلة التسوق الخاصة بك",
+        "Clear Cart": "اخلاء سلة التسوق",
+        "Your Cart is empty": "سلة التسوق الخاصة بك فارغة",
+        "Total": "المجموع",
+        "Pay Now": "ادفع الآن"
+    },
+    "wishlist": {
+        "Your Wishlist": "قائمة أمنياتك",
+        "Your Wishlist is empty": "قائمة أمنياتك فارغة"
+    },
+    "allOrders": {
+        "Order": "طلب",
+        "Placed on": "وضع في",
+        "Paid": "مدفوع",
+        "Delivered": "تم التوصيل",
+        "Yes": "نعم",
+        "No": "لا",
+        "Quantity": "الكمية"
+    },
+    "login": {        
+        "forget password ?": "نسيت كلمة المرور؟",
+        "Don't have an account ?": "ليس لديك حساب؟"
+    },
+    "signup": {
+        "Register Now": "سجّل الآن",
+        "Confirm Password": "تأكيد كلمة المرور",
+        "Name is required": "الاسم مطلوب",
+        "MaxLength is 20 chars": "الحد الأقصى 20 حرفًا",
+        "MinLength is 3 chars": "الحد الأدنى 3 أحرف",
+        "Confirm Password is required": "تأكيد كلمة المرور مطلوب",
+        "Confirm Password and Password are not matched": "كلمة المرور وتأكيد كلمة المرور غير متطابقين",
+        "Enter a valid phone number": "أدخل رقم هاتف صحيحًا",
+        "Already have an account ?": "هل لديك حساب بالفعل؟"
+    },
+    "forgetPassword": {
+        "Forget Password": "نسيت كلمة المرور",
+        "Send Reset Code": "إرسال رمز الاستعادة",
+        "Reset Code": "رمز الاستعادة",
+        "Reset code is required": "رمز الاستعادة مطلوب",
+        "Enter a valid reset code": "أدخل رمز استعادة صحيح",
+        "Verify Reset Code": "تحقق من رمز الاستعادة",
+        "Reset Password": "إعادة تعيين كلمة المرور",
+        "New Password": "كلمة المرور الجديدة",
+        "New password is require": "كلمة المرور الجديدة مطلوبة",
+        "Enter a valid new password": "أدخل كلمة مرور جديدة صحيحة",
+        "Reset New Password": "إعادة تعيين كلمة المرور الجديدة"
+    },
+    "checkout": {
+        "Shipping Address": "عنوان الشحن",
+        "Details": "التفاصيل",
+        "City": "المدينة",
+        "Details is required": "التفاصيل مطلوبة",
+        "City is required": "المدينة مطلوبة",
+        "Pay with Card": "الدفع بالبطاقة",
+        "Pay in Cash": "الدفع نقدًا"
+    },
+    "notFound": {
+        "Go to Homepage": "الذهاب إلى الصفحة الرئيسية"
+    },
+    "footer": {
+        "About Us": "معلومات عنا",
+        "About us sentence": "نحن نقدم أفضل المنتجات مع خدمة عالية الجودة. رضاك هو أولويتنا.",
+        "Quick Links": "روابط سريعة",
+        "Shop": "المتجر",
+        "Contact Us": "تواصل معنا",
+        "Enter your email": "أدخل بريدك الإلكتروني",
+        "Phone": "الهاتف",
+        "Address": "العنوان",
+        "Subscribe": "اشترك",
+        "copyright": "2025 فريش كارت. جميع الحقوق محفوظة."
+    },
+    "loading": {
+        "Loading..." : "جار التحميل..."
+    }
+}

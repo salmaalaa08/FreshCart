@@ -1,0 +1,27 @@
+<app-main-slider></app-main-slider>
+
+<div class="w-[90%] mx-auto mb-5">
+  <div class="flex justify-between my-5 w-full">
+    <h1 class="my-5 mx-20 text-gray-700 text-4xl">{{"home.Popular Categories" |translate}}</h1>
+      <button
+        routerLink="/categories"
+        class="px-6 py-2 hover:text-green-700 text-green-600 text-xl font-semibold underline">
+        {{"home.See More" |translate}}
+      </button>
+    </div>
+</div>
+<app-categories-slider [slideData]="datalist"></app-categories-slider>
+
+
+<div class="w-[90%] mx-auto mb-5">
+  <div class="flex justify-between my-5 w-full">
+    <h1 class="my-5 mx-20 text-gray-700 text-4xl">{{"home.Popular Products" |translate}}</h1>
+      <button
+        routerLink="/products"
+        class="px-6 py-2 hover:text-green-700 text-green-600 text-xl font-semibold underline">
+        {{"home.See More" |translate}}
+      </button>
+    </div>
+    <app-top-products></app-top-products>
+    
+</div>

@@ -1,0 +1,123 @@
+{
+    "common": {
+        "Home": "Home",
+        "Brand": "Brand",
+        "Category": "Category",
+        "Categories": "Categories",
+        "Brands": "Brands",
+        "Add to cart": "Add to cart",
+        "All Orders": "All Orders",
+        "Go to All Products": "Go to All Products"
+    },
+    "form": {
+        "Login": "Login",
+        "Signup": "Signup",
+        "Email": "Email",
+        "Password": "Password",
+        "Name": "Name",
+        "Phone": "Phone",
+        "Email is required": "Email is required",
+        "Enter a valid email": "Enter a valid email",
+        "Password is required": "Password is required",
+        "Enter a valid password": "Enter a valid password",
+        "Phone is required": "Phone is required"
+    },
+    "navbar": {
+        "Products": "Products",
+        "Logout": "Logout"
+    },
+    "home": {
+        "Popular Products": "Popular Products",
+        "Popular Categories": "Popular Categories",
+        "Popular Brands": "Popular Brands",
+        "See More": "See More"
+    },
+    "products": {
+        "All Products": "All Products",
+        "Search product": "Search product ..."
+    },
+    "categories": {
+        "All Categories": "All Categories",
+        "No products to this category" : "No products to this category",
+        "No products to this Subcategory" : "No products to this Subcategory"
+    },
+    "brands": {
+        "All Brands": "All Brands",
+        "No products to this brand" : "No products to this brand"
+    },
+    "cart": {
+        "Your Cart": "Your Cart",
+        "Clear Cart": "Clear Cart",
+        "Your Cart is empty": "Your Cart is empty",
+        "Total": "Total",
+        "Pay Now": "Pay Now"
+    },
+    "wishlist": {
+        "Your Wishlist": "Your Wishlist",
+        "Your Wishlist is empty": "Your Wishlist is empty"
+    },
+    "allOrders": {
+        "Order": "Order",
+        "Placed on": "Placed on",
+        "Paid": "Paid",
+        "Delivered": "Delivered",
+        "Yes": "Yes",
+        "No": "No",
+        "Quantity": "Quantity"
+    },
+    "login": {
+        "forget password ?": "Forget password?",
+        "Don't have an account ?": "Don't have an account?"
+    },
+    "signup": {
+        "Register Now": "Register Now",
+        "Confirm Password": "Confirm Password",
+        "Name is required": "Name is required",
+        "MaxLength is 20 chars": "Max length is 20 characters",
+        "MinLength is 3 chars": "Min length is 3 characters",
+        "Confirm Password is required": "Confirm password is required",
+        "Confirm Password and Password are not matched": "Password and confirm password do not match",
+        "Enter a valid phone number": "Enter a valid phone number",
+        "Already have an account ?": "Already have an account?"
+    },
+    "forgetPassword": {
+        "Forget Password": "Forget Password",
+        "Send Reset Code": "Send Reset Code",
+        "Reset Code": "Reset Code",
+        "Reset code is required": "Reset code is required",
+        "Enter a valid reset code": "Enter a valid reset code",
+        "Verify Reset Code": "Verify Reset Code",
+        "Reset Password": "Reset Password",
+        "New Password": "New Password",
+        "New password is require": "New password is required",
+        "Enter a valid new password": "Enter a valid new password",
+        "Reset New Password": "Reset New Password"
+    },
+    "checkout": {
+        "Shipping Address": "Shipping Address",
+        "Details": "Details",
+        "City": "City",
+        "Details is required": "Details are required",
+        "City is required": "City is required",
+        "Pay with Card": "Pay with Card",
+        "Pay in Cash": "Pay in Cash"
+    },
+    "notFound": {
+        "Go to Homepage": "Go to Homepage"
+    },
+    "footer": {
+        "About Us": "About Us",
+        "About us sentence": "We provide the best products with top quality service. Your satisfaction is our priority.",
+        "Quick Links": "Quick Links",
+        "Shop": "Shop",
+        "Contact Us": "Contact Us",
+        "Enter your email": "Enter your email",
+        "Phone": "Phone",
+        "Address": "Address",
+        "Subscribe": "Subscribe",
+        "copyright": "2025 Fresh Cart. All rights reserved."
+    },
+    "loading": {
+        "Loading..." : "Loading..."
+    }
+}
